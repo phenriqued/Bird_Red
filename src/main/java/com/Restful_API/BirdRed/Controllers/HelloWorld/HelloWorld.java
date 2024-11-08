@@ -1,6 +1,7 @@
 package com.Restful_API.BirdRed.Controllers.HelloWorld;
 
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorld {
 
     @GetMapping
-    public String helloWorld(){
-        return "\uD83D\uDC26";
+    public ResponseEntity<String> helloWorld(){
+        return ResponseEntity.ok().body("\uD83D\uDC26");
     }
 
 }
