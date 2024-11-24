@@ -1,6 +1,6 @@
 package com.Restful_API.BirdRed.Entities.User;
 
-import com.Restful_API.BirdRed.DTOs.User.SignUp.UserSignUpDTO;
+import com.Restful_API.BirdRed.DTOs.User.SignUp.UserSingUpDTO;
 import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
@@ -24,7 +24,7 @@ public class User{
     public User() {
     }
 
-    public User(UserSignUpDTO signUpDTO) {
+    public User(UserSingUpDTO signUpDTO) {
         this.email = signUpDTO.email();
         this.nickname = signUpDTO.nickname();
         this.password = signUpDTO.password();
